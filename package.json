@@ -1,0 +1,63 @@
+{
+  "name": "document-api",
+  "version": "1.0.0",
+  "description": "Ajaia Collaborative Document Editor API",
+  "homepage": "https://github.com/joydeep-git/document-api",
+  "bugs": {
+    "url": "https://github.com/joydeep-git/document-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:joydeep-git/document-api.git"
+  },
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0",
+  "author": "Joydeep Das ( joydeep-git )",
+  "type": "module",
+  "main": "src/server.ts",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "db:g": "pnpm dlx prisma generate",
+    "db:m": "pnpm dlx prisma migrate dev",
+    "db:s": "pnpm prisma studio",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.19.15",
+    "@types/multer": "^2.1.0",
+    "prisma": "^7.6.0",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/engines",
+      "argon2",
+      "esbuild",
+      "prisma",
+      "protobufjs"
+    ]
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.6.0",
+    "@prisma/client": "^7.6.0",
+    "argon2": "^0.44.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "express-rate-limit": "^8.3.2",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mammoth": "^1.8.0",
+    "multer": "^2.1.1",
+    "pg": "^8.20.0"
+  }
+}
